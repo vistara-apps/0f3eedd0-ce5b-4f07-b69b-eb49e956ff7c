@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nebula Arena - The ultimate competitive gaming platform">
+    <meta name="keywords" content="gaming, arena, competition, esports, nebula">
+    <title>Nebula Arena - Competitive Gaming Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Navigation -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <h1 class="logo">
+                        <span class="logo-icon">⚡</span>
+                        Nebula Arena
+                    </h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#arena" class="nav-link active">Arena</a></li>
+                    <li><a href="#leaderboard" class="nav-link">Leaderboard</a></li>
+                    <li><a href="#tournaments" class="nav-link">Tournaments</a></li>
+                    <li><a href="#profile" class="nav-link">Profile</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn btn-secondary">Login</button>
+                    <button class="btn btn-primary">Join Arena</button>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h2 class="hero-title">Welcome to the <span class="highlight">Nebula Arena</span></h2>
+                    <p class="hero-subtitle">Where legends are born and champions rise. Join the ultimate competitive gaming experience.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-large">Enter Arena</button>
+                        <button class="btn btn-outline btn-large">Watch Live</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="arena-preview">
+                        <div class="arena-grid">
+                            <div class="grid-cell active"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell active"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell active"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell active"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell active"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Arena Dashboard -->
+            <section class="arena-dashboard">
+                <div class="dashboard-grid">
+                    <!-- Live Matches -->
+                    <div class="dashboard-card">
+                        <h3 class="card-title">Live Matches</h3>
+                        <div class="match-list">
+                            <div class="match-item">
+                                <div class="match-players">
+                                    <span class="player">CyberNinja</span>
+                                    <span class="vs">VS</span>
+                                    <span class="player">QuantumRider</span>
+                                </div>
+                                <div class="match-status live">LIVE</div>
+                            </div>
+                            <div class="match-item">
+                                <div class="match-players">
+                                    <span class="player">StarForge</span>
+                                    <span class="vs">VS</span>
+                                    <span class="player">VoidWalker</span>
+                                </div>
+                                <div class="match-status live">LIVE</div>
+                            </div>
+                            <div class="match-item">
+                                <div class="match-players">
+                                    <span class="player">NeonStrike</span>
+                                    <span class="vs">VS</span>
+                                    <span class="player">CosmicFlare</span>
+                                </div>
+                                <div class="match-status starting">Starting Soon</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leaderboard Preview -->
+                    <div class="dashboard-card">
+                        <h3 class="card-title">Top Players</h3>
+                        <div class="leaderboard-preview">
+                            <div class="leaderboard-item rank-1">
+                                <span class="rank">#1</span>
+                                <span class="player-name">NebulaKing</span>
+                                <span class="score">2,847</span>
+                            </div>
+                            <div class="leaderboard-item rank-2">
+                                <span class="rank">#2</span>
+                                <span class="player-name">StarDestroyer</span>
+                                <span class="score">2,756</span>
+                            </div>
+                            <div class="leaderboard-item rank-3">
+                                <span class="rank">#3</span>
+                                <span class="player-name">GalaxyHunter</span>
+                                <span class="score">2,634</span>
+                            </div>
+                            <div class="leaderboard-item">
+                                <span class="rank">#4</span>
+                                <span class="player-name">VoidMaster</span>
+                                <span class="score">2,521</span>
+                            </div>
+                            <div class="leaderboard-item">
+                                <span class="rank">#5</span>
+                                <span class="player-name">CosmicRage</span>
+                                <span class="score">2,445</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tournament Info -->
+                    <div class="dashboard-card">
+                        <h3 class="card-title">Upcoming Tournaments</h3>
+                        <div class="tournament-list">
+                            <div class="tournament-item">
+                                <div class="tournament-info">
+                                    <h4 class="tournament-name">Nebula Championship</h4>
+                                    <p class="tournament-date">Starts in 2 days</p>
+                                </div>
+                                <div class="tournament-prize">$10,000</div>
+                            </div>
+                            <div class="tournament-item">
+                                <div class="tournament-info">
+                                    <h4 class="tournament-name">Weekly Arena Battle</h4>
+                                    <p class="tournament-date">Starts in 5 hours</p>
+                                </div>
+                                <div class="tournament-prize">$2,500</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Nebula Arena</h4>
+                    <p>The ultimate competitive gaming platform</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#rules">Rules</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#community">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#discord">Discord</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#youtube">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nebula Arena. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
