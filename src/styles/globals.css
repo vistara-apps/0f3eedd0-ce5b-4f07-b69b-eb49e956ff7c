@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 220 80% 50%;
+    --accent: 40 90% 55%;
+    --bg: 220 20% 12%;
+    --surface: 220 25% 16%;
+    --text: 220 15% 95%;
+    --subtle: 220 15% 75%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-bg text-text font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Button Components */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90 shadow-card;
+  }
+
+  .btn-secondary {
+    @apply bg-surface text-text hover:bg-surface/80 border border-subtle/20;
+  }
+
+  .btn-destructive {
+    @apply bg-red-600 text-white hover:bg-red-700;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white;
+  }
+
+  .btn-ghost {
+    @apply hover:bg-surface/50 hover:text-text;
+  }
+
+  .btn-sm {
+    @apply h-9 px-3 text-xs;
+  }
+
+  .btn-md {
+    @apply h-10 px-4 py-2;
+  }
+
+  .btn-lg {
+    @apply h-11 px-8 text-base;
+  }
+
+  /* Card Components */
+  .card {
+    @apply rounded-lg border bg-surface shadow-card;
+  }
+
+  .card-default {
+    @apply border-subtle/20;
+  }
+
+  .card-outlined {
+    @apply border-primary/30;
+  }
+
+  .card-sm {
+    @apply p-4;
+  }
+
+  .card-md {
+    @apply p-6;
+  }
+
+  .card-lg {
+    @apply p-8;
+  }
+
+  /* Input Components */
+  .input {
+    @apply flex h-10 w-full rounded-md border border-subtle/20 bg-surface px-3 py-2 text-sm ring-offset-bg file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  /* Progress Components */
+  .progress {
+    @apply relative h-4 w-full overflow-hidden rounded-full bg-surface;
+  }
+
+  .progress-indicator {
+    @apply h-full w-full flex-1 bg-primary transition-all;
+  }
+
+  /* Avatar Components */
+  .avatar {
+    @apply relative flex shrink-0 overflow-hidden rounded-full;
+  }
+
+  .avatar-sm {
+    @apply h-8 w-8;
+  }
+
+  .avatar-md {
+    @apply h-10 w-10;
+  }
+
+  .avatar-lg {
+    @apply h-12 w-12;
+  }
+
+  /* NFT Card Styles */
+  .nft-card {
+    @apply card card-default card-md relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer;
+  }
+
+  .nft-card-selected {
+    @apply ring-2 ring-accent shadow-focus;
+  }
+
+  .nft-card-rarity-common {
+    @apply border-gray-400;
+  }
+
+  .nft-card-rarity-rare {
+    @apply border-blue-400;
+  }
+
+  .nft-card-rarity-epic {
+    @apply border-purple-400;
+  }
+
+  .nft-card-rarity-legendary {
+    @apply border-accent animate-pulse-glow;
+  }
+
+  /* Battle Arena Styles */
+  .battle-arena {
+    @apply relative min-h-screen bg-gradient-to-br from-bg via-surface to-bg overflow-hidden;
+  }
+
+  .battle-arena::before {
+    content: '';
+    @apply absolute inset-0 bg-[url('/battle-bg.svg')] bg-cover bg-center opacity-10;
+  }
+
+  /* Notification Styles */
+  .notification {
+    @apply fixed top-4 right-4 z-50 w-96 rounded-lg border bg-surface p-4 shadow-lg animate-slide-up;
+  }
+
+  .notification-success {
+    @apply border-green-500 bg-green-500/10;
+  }
+
+  .notification-error {
+    @apply border-red-500 bg-red-500/10;
+  }
+
+  .notification-warning {
+    @apply border-yellow-500 bg-yellow-500/10;
+  }
+
+  .notification-info {
+    @apply border-blue-500 bg-blue-500/10;
+  }
+
+  /* Loading Spinner */
+  .spinner {
+    @apply animate-spin rounded-full border-2 border-subtle border-t-accent;
+  }
+
+  /* Glow Effects */
+  .glow-primary {
+    @apply shadow-[0_0_20px_rgba(59,130,246,0.5)];
+  }
+
+  .glow-accent {
+    @apply shadow-[0_0_20px_rgba(251,191,36,0.5)];
+  }
+
+  /* Typography */
+  .text-display {
+    @apply text-4xl font-bold;
+  }
+
+  .text-heading {
+    @apply text-2xl font-semibold;
+  }
+
+  .text-body {
+    @apply text-base font-normal leading-7;
+  }
+
+  .text-caption {
+    @apply text-sm font-normal;
+  }
+
+  /* Utility Classes */
+  .container-app {
+    @apply max-w-xl mx-auto px-4;
+  }
+
+  .grid-12 {
+    @apply grid grid-cols-12 gap-4;
+  }
+
+  /* Scrollbar Styles */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--subtle)) hsl(var(--surface));
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: hsl(var(--surface));
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--subtle));
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--accent));
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
